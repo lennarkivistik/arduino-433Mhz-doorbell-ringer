@@ -10,3 +10,13 @@ so in order to make it even more annoying, I created this little project to take
 * STL files for 3d Printing.
 * Parts List
 * Schematics used to make it all work.
+
+
+## Parts needed
+* 1 x Arduino Nano
+* 1 X New H34A-433 433Mhz MINI Wireless Transmitter Module ASK 2.6-12V
+* 1 x 0.96" I2C IIC Serial 128X64 128*64 White OLED LCD LED Display Module for Arduino
+* 1 x Ultrasonic Module HC-SR04 Distance Measuring Transducer Sensor For Arduino/AVR K
+* 1 x 100uF Capacitor
+* 1 x Momentary Switch
+* 1 x 10k resistor (for the switch)
