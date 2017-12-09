@@ -1,0 +1,98 @@
+int sensorValue = 0;        // value read from the pot
+int outputValue = 0;        // value output to the PWM (analog out)
+byte mask = 1; //our bitmask
+int Tmask = 1; //our bitmask
+
+byte number = 0x0F;
+
+void setup() {
+  // initialize serial communications at 9600 bps:
+  Serial.begin(9600);
+  ringDoorbell();
+}
+
+void loop() {
+  //funk();
+  //funkTwo();
+ // delay(30000);
+}
+
+void funk(){
+        Serial.print("Mask Test: ");
+        byte data = B01101010;
+        
+        for (mask = 00000001; mask>0; mask <<= 1) { //iterate through bit mask
+          if (number & mask){ // if bitwise AND resolves to true
+            Serial.print(1);
+          }
+          else{ //if bitwise and resolves to false
+            Serial.print(0);
+          }
+        }
+        Serial.println("");
+  
+}
+
+void funkTwo (){
+  Serial.println("Mask Test2: ");
+
+
+  
+  for (byte i = 0x00; i <=0x1F; i++)
+  {
+        for (mask = 00000001; mask>0; mask <<= 1) { //iterate through bit mask
+          if (i & mask){ // if bitwise AND resolves to true
+             Serial.print(1);
+          }
+          else{ //if bitwise and resolves to false
+            Serial.print(0);
+          }
+        }    
+          Serial.println("");
+    }
+    Serial.println("---------------");
+}
+
+
+
+void ringDoorbell(){
+
+  for (byte id = 0x00; id <=0x1F; id++)
+  {
+  
+    for(byte i=1; i<= 1; i++){
+      
+        // Initialize Packet with 3 zeros
+        for(byte i=0; i<3; i++){
+          Serial.print(0);
+        }
+        
+        Serial.print(" ");
+        
+        // Custom doorbell Id
+        for (mask = 00000001; mask>0; mask <<= 1) { //iterate through bit mask
+          if (id & mask)
+            Serial.print(1);
+          else
+            Serial.print(0);
+        }
+        
+        Serial.print(" ");
+        
+        // Send The DoorBell Signal
+        byte e=1;
+        for (Tmask = 00000000000001; Tmask>0; Tmask <<= 1) { //iterate through bit mask
+          if(e <= 14){
+            if (0x55F & Tmask)
+              Serial.print(1);
+            else
+              Serial.print(0);
+          }
+          e++;
+        }
+        Serial.println("");
+    
+    }
+  }
+  
+}
