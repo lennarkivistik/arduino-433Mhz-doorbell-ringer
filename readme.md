@@ -25,7 +25,10 @@ so in order to make it even more annoying, I created this little project to take
 * 1 x 10k resistor (for the switch)
 
 ## Spectrum Analysis 433Mhz
-![](Photos/Photos/spectrum-analysis-in-audacity.png)
+![](Photos/spectrum-analysis-in-audacity.png)
 
-## Spectrum Analysis 433Mhz
-![](Photos/Photos/spectrum-analysis-in-audacity.png)
+## Checking signal in oscilloscope.
+![](Photos/checking-signal-on-oscilloscope.jpg)
+
+## Testing Video.
+![](Photos/433mhz-test-with-spectrum-analyzer.mp4)
