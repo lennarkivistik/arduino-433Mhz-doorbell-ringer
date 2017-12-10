@@ -1,4 +1,5 @@
 # 433Mhz Doorbell Ringer
+![](Photos/front-view.jpg)
 
 ### What does it do?
 This is the code required to send a 433Mhz binary signal to a unknown brand
@@ -11,6 +12,8 @@ so in order to make it even more annoying, I created this little project to take
 * Parts List
 * Schematics used to make it all work.
 
+### Schematics
+![](Photos/433mhz-schematics.png)
 
 ## Parts needed
 * 1 x Arduino Nano
@@ -20,3 +23,9 @@ so in order to make it even more annoying, I created this little project to take
 * 1 x 100uF Capacitor
 * 1 x Momentary Switch
 * 1 x 10k resistor (for the switch)
+
+## Spectrum Analysis 433Mhz
+![](Photos/Photos/spectrum-analysis-in-audacity.png)
+
+## Spectrum Analysis 433Mhz
+![](Photos/Photos/spectrum-analysis-in-audacity.png)
